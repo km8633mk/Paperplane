@@ -1,0 +1,162 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://main/HUD.gd" id="1"]
+[ext_resource type="Texture2D" path="res://sprites/stamp.png" id="2"]
+[ext_resource type="Texture2D" path="res://sprites/coin.png" id="3"]
+[ext_resource type="Texture2D" path="res://sprites/feather.png" id="4"]
+[ext_resource type="Texture2D" path="res://sprites/heart.png" id="5"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1")
+
+[node name="Status" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 14.0
+offset_right = 620.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.161, 0.302, 0.349, 1)
+theme_override_font_sizes/font_size = 22
+text = "PAPIERFLIEGER  ·  Finde den Briefkasten"
+
+[node name="Items" type="HBoxContainer" parent="."]
+offset_left = 20.0
+offset_top = 48.0
+offset_right = 380.0
+offset_bottom = 74.0
+theme_override_constants/separation = 6
+
+[node name="StampIcon" type="TextureRect" parent="Items"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StampCount" type="Label" parent="Items"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.161, 0.302, 0.349, 1)
+theme_override_font_sizes/font_size = 18
+text = "0/3"
+
+[node name="CoinIcon" type="TextureRect" parent="Items"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CoinCount" type="Label" parent="Items"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.161, 0.302, 0.349, 1)
+theme_override_font_sizes/font_size = 18
+text = "0/3"
+
+[node name="FeatherIcon" type="TextureRect" parent="Items"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FeatherCount" type="Label" parent="Items"]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.161, 0.302, 0.349, 1)
+theme_override_font_sizes/font_size = 18
+text = "0/3"
+
+[node name="Mode" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 78.0
+offset_right = 620.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(0.161, 0.302, 0.349, 1)
+theme_override_font_sizes/font_size = 16
+
+[node name="Hearts" type="HBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -116.0
+offset_top = 14.0
+offset_right = -20.0
+offset_bottom = 42.0
+grow_horizontal = 0
+theme_override_constants/separation = 6
+alignment = 2
+
+[node name="Heart1" type="TextureRect" parent="Hearts"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart2" type="TextureRect" parent="Hearts"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart3" type="TextureRect" parent="Hearts"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Time" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -240.0
+offset_top = 48.0
+offset_right = -20.0
+offset_bottom = 100.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.161, 0.302, 0.349, 1)
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 2
+
+[node name="Help" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -56.0
+offset_right = 760.0
+offset_bottom = -8.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.161, 0.302, 0.349, 1)
+theme_override_font_sizes/font_size = 16
+text = "↑ / W / Leertaste: Auftrieb   ·   ↓ / S halten: sinken   ·   ← / A halten: bremsen
+Shift / X: falten (Düse für rote Tore, Gleiter für Wind)   ·   R: Neustart"
+
+[node name="Message" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.161, 0.302, 0.349, 1)
+theme_override_colors/font_outline_color = Color(0.957, 0.925, 0.847, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Banner" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 120.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.161, 0.302, 0.349, 1)
+theme_override_colors/font_outline_color = Color(0.957, 0.925, 0.847, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1

@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://course/Course.gd" id="1"]
+[ext_resource type="Script" path="res://course/CourseGenerator.gd" id="2"]
+[ext_resource type="Script" path="res://course/PickupSpawner.gd" id="3"]
+[ext_resource type="PackedScene" path="res://course/SectionTrigger.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://course/Mailbox.tscn" id="5"]
+
+[node name="Course" type="Node2D"]
+script = ExtResource("1")
+
+[node name="CourseGenerator" type="Node" parent="."]
+script = ExtResource("2")
+
+[node name="PickupSpawner" type="Node" parent="."]
+script = ExtResource("3")
+
+[node name="Section1" parent="." instance=ExtResource("4")]
+position = Vector2(150, 280)
+title = "Abschnitt 1: Einflug"
+
+[node name="Section2" parent="." instance=ExtResource("4")]
+position = Vector2(1900, 280)
+title = "Abschnitt 2: Über den Dächern"
+
+[node name="Section3" parent="." instance=ExtResource("4")]
+position = Vector2(3800, 280)
+title = "Abschnitt 3: Sturmfront"
+
+[node name="Mailbox" parent="." instance=ExtResource("5")]
+position = Vector2(6150, 280)
