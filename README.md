@@ -2,6 +2,8 @@
 
 Ein kleiner 2D-Godot-Prototyp für die Projektarbeit **Creative Game & XR Experience**.
 
+![Screenshot: Der Papierflieger als Düsenflieger vor einem engen roten Tor, mit Münzen, Federn und einem Aufwind. Oben das HUD mit Mission, Herzen und Zeit.](docs/screenshot.png)
+
 ## Spielidee
 
 Ein Papierflieger muss einen Parcours überqueren, Hindernissen ausweichen und Windböen nutzen, um Höhe zu gewinnen. Die Faltform lässt sich jederzeit wechseln:
